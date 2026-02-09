@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
+namespace SurveyOrganizationRegistrationSystem.Pages;
+
 public class SuccessModel : PageModel
 {
     public IActionResult OnGet()
