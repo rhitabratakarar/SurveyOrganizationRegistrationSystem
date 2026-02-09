@@ -18,17 +18,19 @@ public class IndexModel : PageModel
     {
         if (ModelState.IsValid)
         {
+            // TODO: add database layer.
+
             Console.WriteLine(SurveyRegistrationDetails.OrgName);
             Console.WriteLine(SurveyRegistrationDetails.OrgSurveyName);
             Console.WriteLine(SurveyRegistrationDetails.OrgSurveyDesc);
 
             TempData["CanAccess"] = true;
-            
+
             return RedirectToPage("./Success");
         }
         else
         {
-            return RedirectToPage("./Index");
+            return Page();
         }
     }
 }
