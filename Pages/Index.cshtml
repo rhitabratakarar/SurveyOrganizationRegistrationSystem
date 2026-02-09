@@ -1,0 +1,26 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<form method="post">
+    <div class="mt-4 shadow p-3 rounded">
+        <div class="mb-3">
+            <label for="org-name-form-field" class="form-label">Organization Name</label>
+            <input type="text" class="form-control" id="org-name-form-field" placeholder="ABC Organization"
+                   asp-for="SurveyRegistrationDetails.OrgName">
+            </div>
+            <div class="mb-3">
+                <label for="org-survey-name-form-field" class="form-label">Survey Name</label>
+                <input type="text" class="form-control" id="org-survey-name-form-field" placeholder="ABC's Survey"
+                       asp-for="SurveyRegistrationDetails.OrgSurveyName">
+                </div>
+                <div class="mb-3">
+                    <label for="org-survey-desc-form-field" class="form-label">Survey Description</label>
+                    <textarea class="form-control" id="org-survey-desc-form-field" rows="3"
+                              placeholder="This is an optional field." asp-for="SurveyRegistrationDetails.OrgSurveyDesc"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
