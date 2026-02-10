@@ -2,9 +2,11 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.CodeAnalysis;
+using Microsoft.EntityFrameworkCore;
 
 namespace SurveyOrganizationRegistrationSystem.Classes;
 
+[Index(nameof(OrgName), nameof(OrgSurveyName), IsUnique = true)]
 public class OrgSurvey
 {
     [Key]
