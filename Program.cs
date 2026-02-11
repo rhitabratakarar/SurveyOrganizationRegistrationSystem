@@ -11,7 +11,7 @@ string? connectionString = builder.Configuration.GetConnectionString("SurveyMana
 if (connectionString is null)
     return;
 
-builder.Services.AddDbContext<SurveyManagementDbContext>(option => option.UseSqlServer(connectionString));
+builder.Services.AddDbContext<SurveyManagementDbContext>(option => option.UseSqlServer(connectionString, x => x.MigrationsHistoryTable("__EFMigrationsHistory")));
 
 var app = builder.Build();
 
